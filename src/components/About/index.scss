@@ -8,6 +8,15 @@
     max-height: 90%;
   }
 
+  .subheading{
+    margin-top: 24px;
+    color: #fff;
+    font-size: 44px;
+    font-family: 'Coolvetica';
+    letter-spacing: 1px;
+    animation: fadeIn 2s 2.4s backwards;
+  }
+
   h1 {
     color: #fff;
     font-size: 53px;
@@ -18,7 +27,7 @@
     &::before {
       content: '<h1>';
       font-family: 'La Belle Aurore';
-      color: #ffd700;
+      color: #ff4da6;
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -29,7 +38,43 @@
     &::after {
       content: '</h1>';
       font-family: 'La Belle Aurore';
-      color: #ffd700;
+      color: #ff4da6;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
+  }
+  
+
+ 
+
+  /* Make secondary headings visually match the main heading */
+  h2 {
+    color: #fff;
+    font-size: 53px;
+    margin: 24px 0 12px 0;
+    font-family: 'Coolvetica';
+    font-weight: 400;
+    position: relative;
+
+    &::before {
+      content: '<h2>';
+      font-family: 'La Belle Aurore';
+      color: #ff4da6;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -40px;
+      left: 15px;
+      opacity: 0.6;
+    }
+
+    &::after {
+      content: '</h2>';
+      font-family: 'La Belle Aurore';
+      color: #ff4da6;
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
@@ -53,5 +98,79 @@
     &:nth-of-type(3) {
       animation-delay: 2.2s;
     }
+  }
+
+  /* Tool skills rows */
+  .tool-skills {
+    margin-top: 16px;
+    display: grid;
+    row-gap: 12px;
+  }
+
+  .skill-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 44px; /* icon | bar | percent */
+    column-gap: 12px;
+    align-items: center;
+    animation: fadeIn 1s 2.4s backwards;
+  }
+
+  .skill-icon {
+    display: flex;
+    justify-content: center;
+    color: #ff4da6;
+    font-size: 22px; /* icon size */
+  }
+
+  .skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .skill-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0; /* inline style sets actual width */
+    background: linear-gradient(90deg, #ff4da6, #ff8cc9);
+    transition: width 0.8s ease;
+  }
+
+  .skill-percent {
+    color: #8d8d8d;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .skill-row { grid-template-columns: 28px 1fr 36px; }
+    .skill-icon { font-size: 18px; }
+  }
+
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 1024px) {
+  .about-page {
+    .text-zone { width: 55%; }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    .text-zone {
+      position: static;
+      transform: none;
+      width: auto;
+      left: auto;
+      top: auto;
+      padding: 0 24px;
+    }
+
+    
   }
 }

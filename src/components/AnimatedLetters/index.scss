@@ -14,13 +14,14 @@
 
         &:hover{
             animation: rubberBand 1s;
-            color: #ffd700;
+            color: #ff4da6;
             
         }
     }
 
 
-@for $i from 1 through 35{
+/* Increase the range so longer headings animate properly */
+@for $i from 1 through 80{
     .text-animate._#{$i}{
         animation-delay: #{$i/10}s;
 }
