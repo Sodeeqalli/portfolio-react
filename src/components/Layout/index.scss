@@ -1,7 +1,13 @@
 .page {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  top: 52px;
+  left: 0;
+  width: 100%;
+  min-height: calc(100vh - 52px);
+  padding: clamp(40px, 6vw, 72px) clamp(48px, 7vw, 120px);
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #111827;
 }
 
 .top-tags {
@@ -10,8 +16,8 @@
 }
 
 .tags {
-  color: #ff4da6;
-  opacity: 0.6;
+  color: var(--aws-accent);
+  opacity: 0.7;
   position: absolute;
   bottom: 0;
   left: 120px;
@@ -37,6 +43,7 @@
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
 }
+
 .about-page {
   text-zone {
     position: absolute;
@@ -49,48 +56,48 @@
     max-height: 90%;
 
     h1 {
-        font-size: 53px;
-        font-family: 'Coolvetica', sans-serif;
-        color: #ff4da6;
-        margin-top: 0;
-        margin-bottom: 40px;
-        left: 10px;
+      font-size: 53px;
+      font-family: 'Coolvetica', sans-serif;
+      color: var(--aws-text-primary);
+      margin-top: 0;
+      margin-bottom: 40px;
+      left: 10px;
     }
 
-    &::before{
-        content: '<h1>';
-        position: absolute;
-        font-family: 'La Belle Aurore', cursive;
-        font-size: 18px;
-        margin-top: -10px;
-        left: -10px;
-        opacity: 0.6;
-        line-height: 18px;
+    &::before {
+      content: '<h1>';
+      position: absolute;
+      font-family: 'La Belle Aurore', cursive;
+      font-size: 18px;
+      margin-top: -10px;
+      left: -10px;
+      opacity: 0.5;
+      color: var(--aws-accent);
+      line-height: 18px;
     }
 
-    &::after{
-        content: '</h1>';
-        position: absolute;
-        font-family: 'La Belle Aurore', cursive;
-        font-size: 18px;
-        bottom: -30px;
-        left: -10px;
-        opacity: 0.6;
-        margin-left: 20px;
+    &::after {
+      content: '</h1>';
+      position: absolute;
+      font-family: 'La Belle Aurore', cursive;
+      font-size: 18px;
+      bottom: -30px;
+      left: -10px;
+      opacity: 0.5;
+      color: var(--aws-accent);
+      margin-left: 20px;
     }
   }
 
   p {
     font-size: 13px;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    color: var(--aws-text-secondary);
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
     min-width: fit-content;
 
     &:nth-of-type(1) {
-        animation-delay: 1.1s;
-        
+      animation-delay: 1.1s;
     }
-
   }
 }

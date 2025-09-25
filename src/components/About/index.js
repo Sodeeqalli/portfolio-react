@@ -2,14 +2,34 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAws } from '@fortawesome/free-brands-svg-icons'
+import {
+  faAws,
+  faPython,
+  faJs,
+  faNodeJs,
+  faReact,
+  faGitAlt,
+  faGithub,
+  faJava,
+  faCuttlefish,
+} from '@fortawesome/free-brands-svg-icons'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const tools = [
-    { name: 'AWS', icon: faAws , level: 80},
-    // Add more tools and their corresponding FontAwesome icons here
+    { name: 'AWS', icon: faAws, level: 80 },
+    { name: 'Python', icon: faPython, level: 80 },
+    { name: 'GitHub', icon: faGithub, level: 80 },
+    { name: 'Git', icon: faGitAlt, level: 80 },
+    { name: 'JavaScript', icon: faJs, level: 70 },
+    { name: 'Node.js', icon: faNodeJs, level: 70 },
+    { name: 'React', icon: faReact, level: 70 },
+    { name: 'Dart', icon: faCode, level: 70 }, 
+    { name: 'Java', icon: faJava, level: 40 },
+    { name: 'C++', icon: faCuttlefish, level: 40 },
+    
   ]
 
   useEffect(() => {
@@ -49,14 +69,38 @@ const About = () => {
           aligns with business needs and delivers great user experiences.
         </p>
         <h2><AnimatedLetters letterClass={letterClass} strArray={[...'Languages, Frameworks & Tools']} idx={1} /></h2>
-        <div className='tool-skills'>
-          {tools.map(t => (
-            <div className='skill-row' key={t.name} role= "group" aria-label={t.name}>
-              <div className='skill-icon' title='{t.name}'><FontAwesomeIcon icon={t.icon}/>
-              </div> <div className='skill-bar' role='progressbar' aria-valuemin="0" aria-valuemax="100" aria-valuenow={t.level}> <div className='skill-fill' style={{width: t.level + '%'}}/></div><div className='skill-percent'>{t.level}%</div></div>))} </div>
+        <div className='tool-skills' role='list'>
+          {tools.map(tool => (
+            <div
+              className='skill-row'
+              key={tool.name}
+              role='listitem'
+              aria-label={`${tool.name} proficiency ${tool.level} percent`}
+            >
+              <div className='skill-icon' title={tool.name}>
+                <FontAwesomeIcon icon={tool.icon} />
+              </div>
+              <div className='skill-center'>
+                <div
+                  className='skill-bar'
+                  role='progressbar'
+                  aria-valuemin='0'
+                  aria-valuemax='100'
+                  aria-valuenow={tool.level}
+                  aria-label={`${tool.name} proficiency`}
+                >
+                  <div className='skill-fill' style={{ width: `${tool.level}%` }} />
+                </div>
+                <div className='skill-name' aria-hidden='true'>
+                  {tool.name}
+                </div>
+              </div>
+              <div className='skill-percent'>{tool.level}%</div>
+            </div>
+          ))}
         </div>
       </div>
-    
+    </div>
   )
 }
 

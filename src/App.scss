@@ -1,21 +1,35 @@
-$primary-color: #ff4da6; // pink accent
+:root {
+  --aws-bg-base: #0b1f2a;
+  --aws-bg-surface: #162332;
+  --aws-panel: #1f2e3d;
+  --aws-sidebar: #232f3e;
+  --aws-panel-light: #1d2d3b;
+  --aws-border: rgba(255, 255, 255, 0.08);
+  --aws-text-primary: #f3f4f7;
+  --aws-text-secondary: #cbd5df;
+  --aws-text-muted: #94a3b8;
+  --aws-accent: #0972d3;
+  --aws-accent-warm: #ec7211;
+  --aws-success: #38bcac;
+  --aws-danger: #f97360;
+}
 
 @import 'animate.css';
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-}
-@font-face {
   font-family: 'La Belle Aurore';
   src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'Coolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 
+body,
 input,
-textarea {
-  font-family: 'Helvetica Neue';
+textarea,
+button {
+  font-family: 'Inter', 'Amazon Ember', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--aws-text-primary);
 }
