@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './index.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXTwitter, faInstagram, faDiscord, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import PortraitOne from '../../assets/images/IMG_9488.JPG'
 import PortraitTwo from '../../assets/images/IMG_9517.JPG'
 import PortraitThree from '../../assets/images/IMG_9524.JPG'
@@ -269,6 +271,9 @@ const Home = () => {
     transform: `translate(${(1 - portfolioProgress) * -50}px, ${(1 - portfolioProgress) * 40}px)`,
   }
 
+  const credlyBadge =
+    'https://cdn.simpleicons.org/credly/FF6B00'
+
   return (
     <main className={`home-page ${isReady ? 'is-ready' : ''}`}>
       <div className='home-scroll' ref={scrollRef}>
@@ -316,6 +321,23 @@ const Home = () => {
               <p className='about-line'>I ALSO LOVE TEACHING.</p>
               <p className='about-line'>I PLAY TABLE-TENNIS.</p>
               <p className='about-line'>PYTHON, AWS, JS.</p>
+              <div className='about-socials'>
+                <a href='https://twitter.com/' target='_blank' rel='noreferrer' aria-label='Twitter'>
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+                <a href='https://instagram.com/' target='_blank' rel='noreferrer' aria-label='Instagram'>
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a href='https://discord.com/' target='_blank' rel='noreferrer' aria-label='Discord'>
+                  <FontAwesomeIcon icon={faDiscord} />
+                </a>
+                <a href='https://linkedin.com/' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+                <a href='https://www.credly.com/' target='_blank' rel='noreferrer' aria-label='Credly'>
+                  <img src={credlyBadge} alt='Credly badge' />
+                </a>
+              </div>
             </div>
           </div>
         </section>
