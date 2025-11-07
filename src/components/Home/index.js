@@ -201,6 +201,7 @@ const techBadges = [
 ]
 
 const Home = () => {
+  const credlyBadge = 'https://cdn.simpleicons.org/credly/FF6B00'
   const [isReady, setIsReady] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [aboutProgress, setAboutProgress] = useState(0)
@@ -271,9 +272,6 @@ const Home = () => {
     transform: `translate(${(1 - portfolioProgress) * -50}px, ${(1 - portfolioProgress) * 40}px)`,
   }
 
-  const credlyBadge =
-    'https://cdn.simpleicons.org/credly/FF6B00'
-
   return (
     <main className={`home-page ${isReady ? 'is-ready' : ''}`}>
       <div className='home-scroll' ref={scrollRef}>
@@ -312,7 +310,6 @@ const Home = () => {
               </figure>
             </div>
             <div className='about-details' style={aboutCopyStyle}>
-              <span className='kicker'>About</span>
               <p className='about-line'>21.</p>
               <p className='about-line'>FROM 🇳🇬.</p>
               <p className='about-line'>LOCATED 🇨🇦.</p>
@@ -322,19 +319,19 @@ const Home = () => {
               <p className='about-line'>I PLAY TABLE-TENNIS.</p>
               <p className='about-line'>PYTHON, AWS, JS.</p>
               <div className='about-socials'>
-                <a href='https://twitter.com/' target='_blank' rel='noreferrer' aria-label='Twitter'>
+                <a href='https://x.com/allisodeeq_' target='_blank' rel='noreferrer' aria-label='Twitter'>
                   <FontAwesomeIcon icon={faXTwitter} />
                 </a>
-                <a href='https://instagram.com/' target='_blank' rel='noreferrer' aria-label='Instagram'>
+                <a href='https://www.instagram.com/sodeeq.alli/' target='_blank' rel='noreferrer' aria-label='Instagram'>
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href='https://discord.com/' target='_blank' rel='noreferrer' aria-label='Discord'>
+                <a href='https://discordapp.com/users/sodeeqalli' target='_blank' rel='noreferrer' aria-label='Discord'>
                   <FontAwesomeIcon icon={faDiscord} />
                 </a>
-                <a href='https://linkedin.com/' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
+                <a href='https://www.linkedin.com/in/sodeeq-alli-94071b267/' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href='https://www.credly.com/' target='_blank' rel='noreferrer' aria-label='Credly'>
+                <a href='https://www.credly.com/users/sodeeq-alli' target='_blank' rel='noreferrer' aria-label='Credly'>
                   <img src={credlyBadge} alt='Credly badge' />
                 </a>
               </div>
