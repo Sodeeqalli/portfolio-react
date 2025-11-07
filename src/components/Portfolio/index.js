@@ -22,21 +22,21 @@ const entries = [
     name: 'Cloud Expense Tracker',
     summary: 'Serverless cost dashboards with automated budget alerts and reporting.',
     story:
-      'Born from monthly budget surprises, this project stitches together AWS Lambda, Step Functions, and QuickSight dashboards to surface spending anomalies in near real time. It also generates weekly digests for finance stakeholders.',
+      'Born from monthly budget surprises, this project stitches together event-driven functions, workflow automation, and lightweight BI dashboards to surface spending anomalies in near real time. It also generates weekly digests for finance stakeholders.',
     media:
       'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80',
     cta: { label: 'View Case Study', href: 'https://github.com/yourusername/cloud-expense-tracker' },
-    tags: ['project', 'aws', 'python', 'serverless'],
+    tags: ['project', 'python', 'serverless'],
   },
   {
     name: 'Realtime Fleet Monitor',
-    summary: 'Live geolocation pipeline using Node.js, websockets, and AWS IoT Core.',
+    summary: 'Live geolocation pipeline using Node.js, websockets, and MQTT brokers.',
     story:
-      'Designed to coordinate field engineers, the monitor ingests vehicle telemetry via IoT Core, enriches it with weather alerts, and streams live status dashboards built in React. Dispatchers can replay any journey to debug incidents.',
+      'Designed to coordinate field engineers, the monitor ingests vehicle telemetry via MQTT brokers, enriches it with weather alerts, and streams live status dashboards built in React. Dispatchers can replay any journey to debug incidents.',
     media:
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
     cta: { label: 'Watch Demo', href: 'https://fleet-monitor.example.com' },
-    tags: ['project', 'aws', 'node.js', 'javascript', 'iot'],
+    tags: ['project', 'node.js', 'javascript', 'iot'],
   },
   {
     name: 'AI Resume Ranker',
@@ -70,29 +70,29 @@ const entries = [
   },
   {
     name: 'Observability Mesh',
-    summary: 'Distributed tracing setup bridging AWS X-Ray with Grafana dashboards.',
+    summary: 'Distributed tracing setup bridging OpenTelemetry collectors with Grafana dashboards.',
     story:
-      'Mission was to unify metrics, logs, and traces. Implemented an EKS add-on mesh that forwards telemetry to Grafana Loki and Tempo, with SLO alerts via PagerDuty and auto-remediation playbooks.',
+      'Mission was to unify metrics, logs, and traces. Implemented a Kubernetes add-on mesh that forwards telemetry to Grafana Loki and Tempo, with SLO alerts via PagerDuty and auto-remediation playbooks.',
     media:
       'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
     cta: { label: 'View Architecture', href: 'https://github.com/yourusername/observability-mesh' },
-    tags: ['project', 'aws', 'observability', 'devops'],
+    tags: ['project', 'observability', 'devops'],
   },
   {
-    name: 'AWS Solutions Architect – Associate',
-    summary: 'Validated ability to design and deploy well-architected solutions on AWS.',
+    name: 'Systems Design Nanodegree',
+    summary: 'Capstone credential focused on distributed systems, caching, and scalability trade-offs.',
     story:
-      'Credential earned by designing resilient multi-tier architectures, cost-optimized workloads, and secure governance models. It underpins many of the production deployments showcased here.',
+      'Completed real-world architecture labs covering load balancing, data partitioning, and chaos testing. Culminated in designing a video streaming platform with automated resilience drills.',
     media:
-      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
-    cta: { label: 'View Credential', href: 'https://www.credly.com/badges/aws-solutions-architect-associate' },
-    tags: ['certification', 'aws', 'architecture'],
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+    cta: { label: 'View Credential', href: 'https://graduation.example.com/systems-design' },
+    tags: ['certification', 'architecture'],
   },
   {
     name: 'Google Cloud Digital Leader',
     summary: 'Demonstrated cloud strategy leadership across GCP products and services.',
     story:
-      'Exam covered cloud transformation case studies, data analytics, and ML strategy. It complements AWS knowledge with a broader multi-cloud perspective when advising stakeholders.',
+      'Exam covered cloud transformation case studies, data analytics, and ML strategy. It broadened my multi-cloud perspective when advising stakeholders.',
     media:
       'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
     cta: { label: 'View Credential', href: 'https://www.credly.com/badges/google-cloud-digital-leader' },
@@ -113,7 +113,6 @@ const entries = [
 const tagLabel = {
   project: 'Projects',
   certification: 'Certifications',
-  aws: 'AWS',
   python: 'Python',
   serverless: 'Serverless',
   'node.js': 'Node.js',

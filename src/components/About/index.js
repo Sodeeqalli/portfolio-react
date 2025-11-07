@@ -3,7 +3,6 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faAws,
   faPython,
   faJs,
   faNodeJs,
@@ -19,14 +18,13 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const tools = [
-    { name: 'AWS', icon: faAws, level: 80 },
     { name: 'Python', icon: faPython, level: 80 },
     { name: 'GitHub', icon: faGithub, level: 80 },
     { name: 'Git', icon: faGitAlt, level: 80 },
     { name: 'JavaScript', icon: faJs, level: 70 },
     { name: 'Node.js', icon: faNodeJs, level: 70 },
     { name: 'React', icon: faReact, level: 70 },
-    { name: 'Dart', icon: faCode, level: 70 }, 
+    { name: 'Dart', icon: faCode, level: 70 },
     { name: 'Java', icon: faJava, level: 40 },
     { name: 'C++', icon: faCuttlefish, level: 40 },
     
@@ -53,7 +51,7 @@ const About = () => {
         <p>
           I am a dedicated and results-driven Software and Cloud Engineer with a
           strong foundation in computer science and a passion for developing
-          innovative solutions. With expertise in Python, JavaScript, and AWS, I
+          innovative solutions. With expertise in Python, JavaScript, and modern cloud tooling, I
           design, implement, and maintain scalable applications and cloud
           infrastructure.
         </p>

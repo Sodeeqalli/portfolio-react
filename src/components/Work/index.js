@@ -47,7 +47,7 @@ const timelineEvents = [
   {
     year: 2022,
     title: 'Cloud Engineering Intern',
-    description: 'Automated AWS infrastructure, writing IaC templates and ensuring deployments were reproducible.',
+    description: 'Automated cloud infrastructure, writing IaC templates and ensuring deployments were reproducible.',
     type: 'work',
   },
   {
