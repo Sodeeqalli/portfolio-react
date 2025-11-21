@@ -311,8 +311,7 @@ const Home = () => {
             </div>
             <div className='about-details' style={aboutCopyStyle}>
               <p className='about-line'>21.</p>
-              <p className='about-line'>FROM 🇳🇬.</p>
-              <p className='about-line'>LOCATED 🇨🇦.</p>
+              <p className='about-line'>LOCATED CALGARY, AB.</p>
               <p className='about-line'>MENG @ UNIVERSITY OF CALGARY.</p>
               <p className='about-line'>LOVE FOOTBALL MORE THAN WORDS CAN EXPRESS.</p>
               <p className='about-line'>I ALSO LOVE TEACHING.</p>

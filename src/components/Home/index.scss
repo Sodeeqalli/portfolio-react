@@ -590,3 +590,126 @@
     height: clamp(260px, 55vh, 360px);
   }
 }
+
+@media (max-width: 1100px) and (orientation: landscape) {
+  .home-page {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .home-section {
+    min-height: auto;
+    height: auto;
+    padding: 2rem clamp(1.5rem, 4vw, 3.25rem);
+  }
+
+  .home-stage,
+  .about-stage,
+  .portfolio-stage,
+  .experience-stage {
+    width: min(100%, 980px);
+  }
+
+  .services-stack {
+    height: auto;
+    min-height: 380px;
+    padding: 2.5rem clamp(1.5rem, 5vw, 3rem);
+    border-radius: 32px;
+  }
+
+  .services-list {
+    font-size: clamp(1.6rem, 3.8vw, 2.6rem);
+    letter-spacing: 0.12em;
+  }
+
+  .experience-gallery-card {
+    height: clamp(260px, 46vh, 360px);
+  }
+}
+
+@media (max-width: 930px) and (orientation: landscape) {
+  .home-stage {
+    gap: 0.75rem;
+  }
+
+  .mood-title {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .mood-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .about-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-details {
+    align-items: center;
+  }
+
+  .about-images {
+    width: min(100%, 360px);
+    height: clamp(260px, 60vh, 340px);
+    margin-bottom: 1.25rem;
+  }
+
+  .services-stack {
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+  }
+
+  .services-list {
+    font-size: clamp(1.25rem, 3.2vw, 2rem);
+    letter-spacing: 0.08em;
+  }
+
+  .portfolio-stage {
+    gap: 1rem;
+  }
+
+  .experience-gallery {
+    padding: 0 0 0.5rem;
+  }
+
+  .experience-gallery-card {
+    width: min(58vw, 260px);
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .home-section {
+    padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  .home-stage {
+    gap: 0.5rem;
+  }
+
+  .services-stack {
+    min-height: auto;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .services-list {
+    gap: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .tech-badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .experience-gallery-card {
+    height: clamp(220px, 60vh, 320px);
+  }
+}
